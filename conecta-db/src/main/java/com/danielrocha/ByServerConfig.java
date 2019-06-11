@@ -6,7 +6,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
-public @interface GetConnection {
+@Target(ElementType.FIELD)
+public @interface ByServerConfig {
+
+    public String key() default "";
 
 }

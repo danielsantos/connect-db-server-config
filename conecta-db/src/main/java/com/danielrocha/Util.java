@@ -1,24 +1,29 @@
 package com.danielrocha;
 
-import java.lang.reflect.Method;
+import javax.sql.ConnectionPoolDataSource;
 import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class Util {
 
-    public static Connection createConnection(Object obj) {
+    public static Connection getConnection() {
+
+        ConnectionProperties properties = new ConnectionProperties();
+
         try {
-            Class clazz = obj.getClass();
-            //if ( clazz.isAnnotationPresent(GetFromConfig.class) ) {
-            for (Method m : clazz.getDeclaredMethods()) {
-                if (m.isAnnotationPresent(GetConnection.class)){
-                    return (Connection) m.invoke(obj);
-                }
-            }
-            //}
+            Class.forName(properties.getJdbcClassName());
+            Connection conn =
+                    DriverManager.getConnection(properties.getUrl(),
+                                                properties.getUser(),
+                                                properties.getPassword());
+
+            return conn;
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return null;
+
     }
 
 }

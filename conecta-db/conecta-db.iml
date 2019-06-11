@@ -10,12 +10,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.12" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.4.2" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.4.2" level="project" />
-    <orderEntry type="library" name="Maven: com.ibm.db2.jcc:db2jcc4_license_cisuz:4.15.146" level="project" />
-    <orderEntry type="library" name="Maven: com.ibm.db2.jcc:db2jcc4:4.15.146" level="project" />
   </component>
 </module>
